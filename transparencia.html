@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Format Experiment</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<header class="bg-blue-500 text-white text-center p-5">
+			<h1 class="text-4xl">Image Format Experiment</h1>
+		</header>
+		<div>
+			<p>
+				<b>Diferències: </b><br />
+				En aquest cas, gràcies a l'efecte 'difuminat' que fa la imatge, es molt
+				mes apreciable la diferència entre cada esforç en les imatges jpg, mes
+				enllà del tamany de cada.
+				<br />
+				En quant a gif i png, si be aquest primer en perd una mica, en png podem
+				veure com es veu correctament amb 24 bits, doncs es així com ha set
+				exportada. Al reduir a 8 bits però, la diferencia de color es torna
+				evident en aquest cas.<br />
+				<b>Millor Format: </b> <br />
+				En una imatge com aquesta, definitivament .png es la millor opció degut
+				a la transparencia. També ens podriem plantejar .gif, però aquest te
+				molt mes sentit per imatges animades i a més perdriem qualitat. Si la
+				guardesim en .jpg, ens tornaria un fons blanc, el que no es ideal.
+        <b>LightHouse: </b> <br />
+				LightHouse dona un rendiment del 96% sobre aquesta pàgina. Recomana
+				utilitzar formats de videos per a animacions (segurament en referència a
+				les imatges .gif). També diu de posar les imatges a tamany original,
+				reduir CSS no utilitzat...<br />
+				Amb una connexió lenta de 3G, podem observar com tarda aproximadament
+				1000 milisegons / 1 segon en carregar una imatge.
+			</p>
+		</div>
+		<main
+			class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5"
+		>
+			<div>
+				<img
+					src="images/transparencia_loweffort.jpeg"
+					alt="Example 1"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img
+					src="images/transparencia_mediumeffort.jpeg"
+					alt="Example 2"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/transparencia.jpeg" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/transparencia.gif" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img
+					src="images/transparencia8bits.png"
+					alt="Example 3"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/transparencia.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+		</main>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

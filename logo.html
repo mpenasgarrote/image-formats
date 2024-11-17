@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Format Experiment</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<header class="bg-blue-500 text-white text-center p-5">
+			<h1 class="text-4xl">Image Format Experiment</h1>
+		</header>
+		<div>
+			<p>
+				<b>Diferències: </b><br />
+				Primerament, hi tenim les diferents imatges en jpg. Les tenim amb baixa,
+				mitjana, i alta qualitat. En aquest cas, no es pot apreciar gaire
+				diferència entre les tres. No obstant, el tamany de l'arxiu si que
+				canvia considerablement. <br />
+				Després, hi tenim la imatge en .gif i en .png, on aquesta última esta en
+				8 bits i 24. Semblant a .jpg, no hi podem apreciar gaire diferència amb
+				aquesta imatge específicament en tèrmins de qualitat en la transferència
+				de .png a .gif, pero en aquest cas si que podem veure com s'ha conservat
+				la transperència. Ja de cara a .png, es interessant veure com al
+				convertir la imatge de 8 a 24 bits perdem la transparència i es pilla
+				una mica amb colors sobrants de fons. Això es deu a que, al fer el canvi
+				a 24 bits, si bé tenim mes repertori de colors (256 vs 16,7 milions)
+				perdem el canal alpha, que es el que fem servir per a la opacitat i es
+				feia servir per la transparència. <br />
+				<b>Millor Format: </b> <br />
+				De cara a un logotip, penso que el millor format possible es un .png de
+				8 bits. Penso que es molt valiós per a un logotip poder comptar amb la
+				transparència d'imatge, ja que segurament el col·locarem a diferents
+				parts de la pàgina i no volem que surti amb un fons blanc. <br />
+				<b>LightHouse: </b> <br />
+				LightHouse dona un rendiment del 76% sobre aquesta pàgina. Entr els
+				problemes principals hi troba el tamany de les imatges, l'encoding de
+				les mateixes, video formats i css inutilitzat.<br />
+				Amb una connexió lenta de 3G, podem observar com tarda aproximadament
+				1000 milisegons / 1 segon en carregar una imatge.
+			</p>
+		</div>
+		<main
+			class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5"
+		>
+			<div>
+				<img src="images/Logo_loweffort.jpg" alt="Example 1" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img
+					src="images/Logo_mediumeffort.jpg"
+					alt="Example 2"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/Logo_higheffort.jpg" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/Logo_gif.gif" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/Logo.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/Logo24.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+		</main>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

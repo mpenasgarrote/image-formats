@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Format Experiment</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<header class="bg-blue-500 text-white text-center p-5">
+			<h1 class="text-4xl">Image Format Experiment</h1>
+		</header>
+		<div>
+			<p>
+				<b>Diferències: </b><br />
+				En les primeres imatges jpg, hi podem veure una gran diferencia entre
+				qualitats en aquest cas, sobretot si ens fixem en la part de "fum" amb
+				una mica de zoom
+				<br />
+				Després, hi tenim la imatge en .gif i el .png en 8 bits i 24 bits de
+				colors. No hi podem veure gaire diferència, mes enllà del tamany d'arxiu
+				en aquest cas. <br />
+				<b>Millor Format: </b> <br />
+				Semblant a la conclusió per al paisatge, penso que .png es el millor
+				format possible si el que volem es visualitzar la imatge en la millor
+				resolució que hi hagi, degut a ser lossless. Si necesitem una
+				compressió/optimització, recomanaría .jpg.
+				<b>LightHouse: </b> <br />
+				LightHouse dona un rendiment del 75% sobre aquesta pàgina. Entr els
+				problemes principals hi troba el tamany de les imatges, l'encoding de
+				les mateixes, video formats i css inutilitzat.<br />
+				Amb una connexió lenta de 3G, podem observar com tarda aproximadament
+				1000 milisegons / 1 segon en carregar una imatge.
+			</p>
+		</div>
+		<main
+			class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5"
+		>
+			<div>
+				<img src="images/cuadre_loweffort.jpg" alt="Example 1" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img
+					src="images/cuadre_mediumeffort.jpg"
+					alt="Example 2"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/cuadre.jpg" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/cuadre.gif" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/cuadre.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/cuadre24.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+		</main>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

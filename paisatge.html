@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Format Experiment</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<header class="bg-blue-500 text-white text-center p-5">
+			<h1 class="text-4xl">Image Format Experiment</h1>
+		</header>
+		<div>
+			<p>
+				<b>Diferències: </b><br />
+				Primerament tenim les imatges en jpg. A diferència de amb el logo, en
+				aquest cas si que tenim una notòria diferència entre qualitats d'imatge
+				, mes apreciable al fer zoom en cada una. Podem veure com "s'esgoten"
+				els pixels i fa efectes "raros", a mes de la diferència de tamany entre
+				cadascuna.<br />
+				Després hi tenim la imatge en .gif, on també hi podem apreciar un altre
+				diferència en qualitat. Finalment, dues imatges .png, una amb 8 bits i
+				l'altre amb 24. En aquest cas no veiem gaires coses rares, excepte la
+				evident falta de color a la imatge de 8 bits. <br />
+				<b>Millor Format: </b> <br />
+				De cara a un paisatge com es aquesta imatge, penso que png torna a ser
+				la millor opció, ja que es tracta de una compressió "lossless". És a
+				dir, no perdriem qualitat d'imatge respecte a la original. No obstant,
+				si necessitem optimitzar el tamany de la imatge per a fer-ne ús en una
+				pàgina web o similars, potser sí que ens interesaria mes un format jpg.
+				Si desem múltiples cops la imatge en jpg aniriem perdent qualitat degut
+				a que es un sistema de compressió "lossy".
+			</p>
+		</div>
+		<main
+			class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5"
+		>
+			<div>
+				<img
+					src="images/paisatge_loweffort.jpeg"
+					alt="Example 1"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img
+					src="images/paisatge_mediumeffort.jpeg"
+					alt="Example 2"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img
+					src="images/paisatge_higheffort.jpeg"
+					alt="Example 3"
+					class="w-full"
+				/>
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/paisatge.gif" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/paisatge8bits.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+			<div>
+				<img src="images/paisatge24.png" alt="Example 3" class="w-full" />
+				<div class="image-info"></div>
+			</div>
+		</main>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>
